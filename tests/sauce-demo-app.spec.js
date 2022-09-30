@@ -34,7 +34,6 @@ test.describe("e2e Test", () => {
   })
 
   test('should add tshirt item', async ({ page }) => {
-    await expect(page).toHaveURL(/.*inventory.html/)
     await inventoryPage.clickTshirtButton()
     await inventoryPage.shoppingCart.click()
     await expect(page).toHaveURL(/.*cart.html/)
@@ -49,7 +48,6 @@ test.describe("e2e Test", () => {
   })
 
   test('should add jacket item', async ({ page }) => {
-    await expect(page).toHaveURL(/.*inventory.html/)
     await inventoryPage.clickJacketButton()
     await inventoryPage.shoppingCart.click()
     await expect(page).toHaveURL(/.*cart.html/)
